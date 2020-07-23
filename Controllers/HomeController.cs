@@ -6,10 +6,36 @@ using System.Web.Mvc;
 
 namespace SampleCansparkDemo.Controllers
 {
+    public class Employee
+    {
+        public string EmpName { get; set; }
+
+        public string EmpAddress { get; set; }
+
+        public string EmpCity { get; set; }
+
+    }
+
     public class HomeController : Controller
     {
         public ActionResult Index()
         {
+            List<Employee> ListEmp = new List<Employee>();
+            ListEmp.Add(new Employee { EmpName = "Varma", EmpAddress = "JPNagar", EmpCity = "Bangalore" });
+            ListEmp.Add(new Employee { EmpName = "Ashwin", EmpAddress = "JPNagar", EmpCity = "Bangalore" });
+            ListEmp.Add(new Employee { EmpName = "Chinnaraj", EmpAddress = "JPNagar", EmpCity = "Bangalore" });
+            ListEmp.Add(new Employee { EmpName = "Sagar", EmpAddress = "JPNagar", EmpCity = "Bangalore" });
+            ListEmp.Add(new Employee { EmpName = "Hari", EmpAddress = "JPNagar", EmpCity = "Bangalore" });
+            ListEmp.Add(new Employee { EmpName = "Ajeya", EmpAddress = "JPNagar", EmpCity = "Bangalore" });
+            ListEmp.Add(new Employee { EmpName = "Chetan", EmpAddress = "JPNagar", EmpCity = "Bangalore" });
+            ListEmp.Add(new Employee { EmpName = "Harish", EmpAddress = "JPNagar", EmpCity = "Bangalore" });
+            ListEmp.Add(new Employee { EmpName = "Chandrashekhar", EmpAddress = "JPNagar", EmpCity = "Bangalore" });
+
+
+            foreach (var item in ListEmp)
+            {
+                Console.WriteLine(ListEmp);
+            }
             return View();
         }
 
