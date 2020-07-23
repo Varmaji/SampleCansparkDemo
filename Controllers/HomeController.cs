@@ -20,6 +20,7 @@ namespace SampleCansparkDemo.Controllers
     {
         public ActionResult Index()
         {
+            List<string> StrEmp = new List<string>();
             List<Employee> ListEmp = new List<Employee>();
             ListEmp.Add(new Employee { EmpName = "Varma", EmpAddress = "JPNagar", EmpCity = "Bangalore" });
             ListEmp.Add(new Employee { EmpName = "Ashwin", EmpAddress = "JPNagar", EmpCity = "Bangalore" });
